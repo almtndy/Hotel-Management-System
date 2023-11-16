@@ -12,18 +12,16 @@
     <title>SB Admin 2 - Blank</title>
 
     @if(!Session::has('adminData'))
-        <script type="text/javascript">
-            window.location.href="{{url('admin/login') }}";
-        </script>
+    <script type="text/javascript">
+        window.location.href = "{{url('admin/login') }}";
+    </script>
     @endif
 
     <!-- Custom fonts for this template-->
-    
+
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
@@ -62,17 +60,16 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                
+
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link @if(!request()->is('admin/roomtype*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link @if(!request()->is('admin/roomtype*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-table"></i>
                     <span>RoomType</span>
                 </a>
-                <div id="collapseTwo" class="collapse @if(request()->is('admin/roomtype*')) show @endif"  aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse @if(request()->is('admin/roomtype*')) show @endif" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="{{url('admin/roomtype/create')}}">Add New</a>
                         <a class="collapse-item" href="{{url('admin/roomtype')}}">View All</a>
@@ -82,8 +79,7 @@
 
             <!-- Room Master  -->
             <li class="nav-item">
-                <a class="nav-link @if(!request()->is('admin/rooms*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#roomMaster"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link @if(!request()->is('admin/rooms*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#roomMaster" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-box"></i>
                     <span>Room</span>
                 </a>
@@ -97,8 +93,7 @@
 
             <!-- Customer Master  -->
             <li class="nav-item">
-                <a class="nav-link @if(!request()->is('admin/customer*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#CustomerMaster"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link @if(!request()->is('admin/customer*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#CustomerMaster" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Customer</span>
                 </a>
@@ -112,8 +107,7 @@
 
             <!-- Department Master  -->
             <li class="nav-item">
-                <a class="nav-link @if(!request()->is('admin/department*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#DepartmentMaster"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link @if(!request()->is('admin/department*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#DepartmentMaster" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-building"></i>
                     <span>Department</span>
                 </a>
@@ -125,11 +119,10 @@
                 </div>
             </li>
 
-            
+
             <!-- Staff Master  -->
             <li class="nav-item">
-                <a class="nav-link @if(!request()->is('admin/staff*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#StaffMaster"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link @if(!request()->is('admin/staff*')) collapsed @endif" href="#" data-toggle="collapse" data-target="#StaffMaster" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Staff</span>
                 </a>
@@ -142,25 +135,25 @@
             </li>
 
             <li class="nav-item">
-    <a class="nav-link" href="{{ url('admin/booking') }}">
-        <i class="fas fa-hotel"></i>
-        <span>Bookings</span>
-    </a>
-</li>
-
-<li class="nav-item">
-    <a class="nav-link" href="{{ url('admin/service') }}">
-        <i class="fas fa-table"></i>
-        <span>Services</span>
-    </a>
-</li>
+                <a class="nav-link" href="{{ url('admin/booking') }}">
+                    <i class="fas fa-hotel"></i>
+                    <span>Bookings</span>
+                </a>
+            </li>
 
             <li class="nav-item">
-    <a class="nav-link" href="{{ url('admin/logout') }}">
-        <i class="fas fa-fw fa-sign-out-alt"></i>
-        <span>Logout</span>
-    </a>
-</li>
+                <a class="nav-link" href="{{ url('admin/service') }}">
+                    <i class="fas fa-table"></i>
+                    <span>Services</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('admin/logout') }}">
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
         </ul>
         <!-- End of Sidebar -->
 
@@ -184,18 +177,14 @@
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -211,16 +200,13 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                             
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -234,7 +220,7 @@
                 </nav>
                 <!-- End of Topbar -->
 
-        @yield('content')
+                @yield('content')
 
             </div>
             <!-- End of Main Content -->
@@ -243,7 +229,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Arnel Tagupa 2023</span>
+                        <span>Copyright &copy; Dreamcatcher 2023</span>
                     </div>
                 </div>
             </footer>
@@ -261,8 +247,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -282,15 +267,15 @@
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-<!-- Core plugin JavaScript-->
-<script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
-<!-- Custom scripts for all pages-->
-<script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
 
-@yield('scripts')
+    @yield('scripts')
 </body>
 
 </html>

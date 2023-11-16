@@ -9,15 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Nel Luxury Hotel</title>
+    <title>Dream Luxury Hotel</title>
 
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
@@ -43,16 +41,13 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form class="user" method="post" action="{{url('admin/login') }}" >
+                                    <form class="user" method="post" action="{{url('admin/login') }}">
                                         @csrf
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" @if(Cookie::has('adminuser')) value="{{ Cookie::get('adminuser')}}" @endif
-                                                id="username" name="username" aria-describedby="emailHelp"
-                                                placeholder="Username">
+                                            <input type="text" class="form-control form-control-user" @if(Cookie::has('adminuser')) value="{{ Cookie::get('adminuser')}}" @endif id="username" name="username" aria-describedby="emailHelp" placeholder="Username">
                                         </div>
                                         <div class="form-group">
-                                            <input name="password" @if(Cookie::has('adminpwd')) value="{{ Cookie::get('adminpwd')}}" @endif type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                            <input name="password" @if(Cookie::has('adminpwd')) value="{{ Cookie::get('adminpwd')}}" @endif type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -62,25 +57,25 @@
                                             </div>
                                         </div>
                                         <input type="submit" class="btn btn-warning btn-user btn-block" value="login" />
-                                        
-                                        
+
+
                                     </form>
 
                                     @if($errors->any())
-                                        @foreach($errors->all() as $error)
-                                            <p class="text-danger">{{ $error }}</p>
-                                        @endforeach
+                                    @foreach($errors->all() as $error)
+                                    <p class="text-danger">{{ $error }}</p>
+                                    @endforeach
                                     @endif
 
                                     @if(Session::has('msg'))
-                                            <p class="text-danger">{{session('msg')}}</p>
-                                     @endif
+                                    <p class="text-danger">{{session('msg')}}</p>
+                                    @endif
 
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
