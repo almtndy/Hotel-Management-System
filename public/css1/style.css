@@ -30,6 +30,17 @@ src: url("../fonts/BalooChettan-Regular.ttf");
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
+.bed-images{
+    display: flex;
+    justify-content: center;
+}
+
+.bed-images img {
+    margin-right: 10px; /* Optional: Add some space between the images */
+    max-width: 300px; /* Adjust the maximum width of the images */
+    height: 350; /* Maintain aspect ratio */
+}
+
 * {
      box-sizing: border-box !important;
      transition: ease all 0.5s;
@@ -40,14 +51,14 @@ html {
 }
 
 body {
-     color: #666666;
+     color: #000000;
      font-size: 14px;
      font-family:Poppins;
      line-height: 1.80857;
      font-weight: normal;
      overflow-x: hidden;
+     margin: 0;
 }
-
 a {
      color: #1f1f1f;
      text-decoration: none !important;
@@ -185,7 +196,7 @@ img {
 
 .form-control:focus {
      border-color: #ffffff !important;
-     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+     box-shadow: 0 0 0 .3rem rgba(0, 0, 0, 0.25);
 }
 
 .navbar-form input {
@@ -230,20 +241,20 @@ button {
     background-size: 100%;
 }
 .bg-light {
-    background-color: transparent !important;
+    background-color: #fdbe28 !important;
 }
 .logo {
     width: 25%;
     float: left;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: #111111;
+    color: #ffffff;
     font-size: 18px;
     text-transform: uppercase;
 }
 .navbar-light .navbar-nav .nav-link:focus, 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #ffb607;
+    color: #000000;
 }
 
 .mr-auto, .mx-auto {
@@ -263,13 +274,13 @@ button {
     float: left;
     padding-left: 20px;
     font-size: 18px;
-    color: #000;
+    color: #ffffff;
 }
 .search_icon li a{
-    color: #000;
+    color: #ffffff;
 }
 .search_icon li a:hover{
-    color: #ffb607;
+    color: #000000;
 }
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 20px;
@@ -278,6 +289,10 @@ button {
 
 .nav-item {
     position: relative;
+}
+
+.custom-toggler {
+    background-color: white; /* Change to your desired color */
 }
 
 .navbar-nav.mr-auto ul {
@@ -291,7 +306,6 @@ button {
 .banner_section {
     width: 100%;
     float: left;
-    padding: 90px 0px;
 }
 .icon_1{
     width: 100%;
@@ -301,32 +315,40 @@ button {
 .furniture_text{
     width: 100%;
     float: left;
-    font-size: 100px;
-    color: #090808;
+    font-size: 80px;
+    color: #ffffff;
     text-align: center;
     text-transform: uppercase;
+}
+
+.bed_img{
+    width: 20%;
+    margin: 0 auto;
 }
 .there_text {
     width: 50%;
     margin: 0 auto;
     font-size: 16px;
-    color: #090808;
+    font-style: oblique;
+    font-weight:normal;
+    color: #ffffff;
     text-align: center;
 }
 .contact_bt_main{
-    width: 17%;
+    width: 14%;
     margin: 0 auto;
     text-align: center;
 }
 .contact_bt {
-    width: 100%;
+    width: 80%;
     float: left;
-    margin-top: 360px;
+    margin-top: 50px;
+    padding-bottom: 70%;
 }
 .contact_bt a{
     width: 100%;
     float: left;
-    font-size: 18px;
+    font-size: 14px;
     color: #ffffff;
     background-color: #ffb607;
     text-align: center;
@@ -382,7 +404,7 @@ button {
     width: 100%;
     float: left;
     font-size: 36px;
-    color: #090808;
+    color: #ffffff;
     text-align: center;
     text-transform: uppercase;
 }
@@ -390,7 +412,7 @@ button {
     width: 100%;
     float: left;
     font-size: 16px;
-    color: #090808;
+    color: #ffffff;
     text-align: center;
     margin-left: 0px;
     margin-top: 10px;
@@ -446,9 +468,10 @@ button {
 .about_section{
     width: 100%;
     float: left;
-    background-color: #ffb607;
+    background-color: #fdbd28d2;
     height: auto;
     padding-bottom: 90px;
+    color: white;
 }
 .image_1{
     width: 100%;
@@ -500,7 +523,7 @@ button {
     width: 100%;
     float: left;
     font-size: 36px;
-    color: #121111;
+    color: #ffffff;
     text-transform: uppercase;
     text-align: center;
 }
@@ -508,7 +531,7 @@ button {
     width: 100%;
     float: left;
     font-size: 16px;
-    color: #090808;
+    color: #ffffff;
     text-align: center;
     margin-left: 0px;
     margin-top: 10px;
@@ -665,7 +688,17 @@ a:hover {
   transition: .5s ease;
   backface-visibility: hidden;
 }
+.bg-register-image {
+    background-image: url(../img/logo-bg.png);
+    background-position:center;
+    background-size:cover;
+}
 
+.bg-login-image {
+    background-image: url(../img/logo-bg.png);
+    background-position:center;
+    background-size:cover;
+}
 .middle {
     transition: .5s ease;
     opacity: 0;
@@ -755,7 +788,7 @@ a:hover {
     width: 100%;
     float: left;
     font-size: 36px;
-    color: #121111;
+    color: #000000;
     text-transform: uppercase;
     text-align: center;
 }
@@ -786,14 +819,14 @@ a:hover {
     width: 100%;
     float: left;
     font-size: 20px; 
-    color: #191919;
+    color: #ffffff;
     text-transform: uppercase;
 }
 .dolor_ipsum_text{
     width: 100%;
     float: left;
     font-size: 16px; 
-    color: #191919;
+    color: #ffffff;
     margin-left: 0px;
     margin-top: 0px;
 }
@@ -826,7 +859,7 @@ a:hover {
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
-    padding-bottom: 90px;
+    padding-top: 90px;
 }
 .mail_sectin{
     width: 100%;
@@ -836,8 +869,7 @@ a:hover {
     width: 100%;
     float: left;
     font-size: 36px;
-    color: #ffffff;
-
+    color: #000000;
 }
 .email-bt {
     color: #989696;
@@ -874,7 +906,7 @@ textarea#comment::placeholder {
     width: 30%;
     float: left;
     font-size: 20px;
-    color: #989696;
+    color: #ffffff;
     text-align: center;
     border: 2px solid #ffffff;
     padding: 10px 0px;
@@ -939,13 +971,13 @@ textarea#comment::placeholder {
     float: left;
     background-color: #313131;
     height: auto;
-    padding-bottom: 90px;
+    padding-top: 20px;
 }
 
 .customer_text{
     width: 100%;
     float: left;
-    font-size: 24px;
+    font-size: 20px;
     color: #ffffff;
     text-transform: uppercase;
 }
@@ -953,14 +985,14 @@ textarea#comment::placeholder {
 .footer_lorem_text{
     width: 80%;
     float: left;
-    font-size: 16px;
+    font-size: 12px;
     color: #fefefe;
     margin-left: 0px;
 }
 .footer_lorem_text1{
     width: 100%;
     float: left;
-    font-size: 16px;
+    font-size: 12px;
     color: #fefefe;
     margin-left: 0px;
 }
@@ -983,14 +1015,14 @@ textarea#comment::placeholder {
 .copyright_section {
     width: 100%;
     float: left;
-    background-color: #ffffff;
+    background-color: #fdbe28;
     height: auto;
 }
 
 .copyright_text {
     width: 100%;
     float: left;
-    color: #000;
+    color: #ffffff;
     text-align: center;
     font-size: 16px;
     margin-left: 0px;

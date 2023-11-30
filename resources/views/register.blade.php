@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="bg-gradient-warning">
+<body>
 
     <div class="container">
 
@@ -106,11 +106,9 @@
 
                             </form>
 
-                            <div class="text-center">
-                                <a class="small" href="#">Forgot Password?</a>
-                            </div>
-                            <div class="text-center">
-                                <a class="small" href="{{url('/')}}">Already have an account? Login!</a>
+                            <div class="">
+                                <a class="medium" href="#">Forgot Password?</a><br>
+                                <a class="medium" href="{{url('/frontlogin')}}">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>

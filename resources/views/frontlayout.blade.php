@@ -69,14 +69,14 @@
       <div class="container">
          <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a href="{{url('/')}}">
-               <h3>Dream Luxury Hotel</h3>
+               <!-- <h3>Dream Luxury Hotel</h3> -->
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                      <a class="nav-link" href="#home">Home</a>
                   </li>
                   <li class="nav-item">
@@ -90,26 +90,26 @@
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="#contact">Contact</a>
-                  </li>
+                  </li> -->
 
                   @if(Session::has('customerlogin'))
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                      <a class="nav-link button btn-warning " style="border-radius:20px" href="{{url('booking')}}">Booking</a>
-                  </li>
+                  </li> -->
                </ul>
                <form class="form-inline my-2 my-lg-0">
                   <div class="search_icon">
                      <ul>
 
-                        <li><a href="{{url('logout')}}">LOGOUT</a></li>
+                        <!-- <li><a href="{{url('logout')}}">LOGOUT</a></li> -->
 
                         @else
                         <form class="form-inline my-2 my-lg-0">
                            <div class="search_icon">
                               <ul>
-                                 <li><a href="{{url('frontlogin')}}">LOGIN</a></li>
+                                 <!-- <li><a href="{{url('frontlogin')}}">LOGIN</a></li>
 
-                                 <li><a href="{{url('register')}}">REGISTER</a></li>
+                                 <li><a href="{{url('register')}}">REGISTER</a></li> -->
                                  @endif
 
 
@@ -152,7 +152,8 @@
             <!-- javascript -->
             <script src="{{ asset ('js1/owl.carousel.js') }}"></script>
             <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min."></script>
-            @yield('scripts')
+         </div>
+         @yield('scripts')
 </body>
 
 </html>

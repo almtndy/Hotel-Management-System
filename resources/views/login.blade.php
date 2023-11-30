@@ -24,70 +24,60 @@
 
 <body class="bg-gradient-warning">
 
-    <div class="container">
-
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"><img src="{{asset ('img/logo.png')}}" alt=""></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                                    </div>
-                                    <form class="user" method="post" action="{{url('admin/login') }}">
-                                        @csrf
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" @if(Cookie::has('adminuser')) value="{{ Cookie::get('adminuser')}}" @endif id="username" name="username" aria-describedby="emailHelp" placeholder="Username">
-                                        </div>
-                                        <div class="form-group">
-                                            <input name="password" @if(Cookie::has('adminpwd')) value="{{ Cookie::get('adminpwd')}}" @endif type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" @if(Cookie::has('adminuser')) checked @endif name="rememberme" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
-                                        </div>
-                                        <input type="submit" class="btn btn-warning btn-user btn-block" value="login" />
-
-
-                                    </form>
-
-                                    @if($errors->any())
-                                    @foreach($errors->all() as $error)
-                                    <p class="text-danger">{{ $error }}</p>
-                                    @endforeach
-                                    @endif
-
-                                    @if(Session::has('msg'))
-                                    <p class="text-danger">{{session('msg')}}</p>
-                                    @endif
-
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-
+    <div>
+        <div class="container">
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-5 d-none d-lg-block"><img src="{{asset ('img/logo.png')}}" alt=""></div>
+                        <div class="col-lg-7">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                 </div>
+                                <form class="user" method="post" action="{{url('admin/login') }}">
+                                    @csrf
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" @if(Cookie::has('adminuser')) value="{{ Cookie::get('adminuser')}}" @endif id="username" name="username" aria-describedby="emailHelp" placeholder="Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="password" @if(Cookie::has('adminpwd')) value="{{ Cookie::get('adminpwd')}}" @endif type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <input type="checkbox" @if(Cookie::has('adminuser')) checked @endif name="rememberme" class="custom-control-input" id="customCheck">
+                                            <label class="custom-control-label" for="customCheck">Remember
+                                                Me</label>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn btn-warning btn-user btn-block" value="login" />
+
+
+                                </form>
+
+                                @if($errors->any())
+                                @foreach($errors->all() as $error)
+                                <p class="text-danger">{{ $error }}</p>
+                                @endforeach
+                                @endif
+
+                                @if(Session::has('msg'))
+                                <p class="text-danger">{{session('msg')}}</p>
+                                @endif
+
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
     <script src="https://www.google.com/recaptcha/api.js"></script>
 
     <!-- Bootstrap core JavaScript-->
@@ -99,7 +89,6 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
-
 </body>
 
 </html>
